@@ -108,7 +108,7 @@ const UsersList: React.FC = () => {
                     image={Empty.PRESENTED_IMAGE_SIMPLE}
                     description={
                         <div className="text-center">
-                            <Text strong block>No Users Registered</Text>
+                            <Text strong>No Users Registered</Text>
                             <Text type="secondary" className="text-xs">The database currently contains no user records.</Text>
                         </div>
                     }
