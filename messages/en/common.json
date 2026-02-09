@@ -1,0 +1,193 @@
+{
+  "welcome": "Welcome",
+  "guest": "Doctor",
+  "dashboard_overview": "Manage your schedule and collaborate with colleagues.",
+  "quick_actions": "Workspace",
+  "recent_activity": "Updates",
+  "view_all": "See All",
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "remember_me": "Remember me",
+  "forgot_password": "Forgot password?",
+  "no_account": "Don't have an account?",
+  "profile": "Profile",
+  "logout": "Logout",
+  "no_colleagues": "You don't have any colleagues yet",
+  "admin_review_note": "Your request will be reviewed by the admin before activation.",
+  "registration_success": "Registration request sent successfully! Admin will review it.",
+  "fullname": "Full Name",
+  "age": "Age",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "job": "Job",
+  "address": "Address",
+  "doctor_photo": "Doctor's Photo",
+  "upload_photo": "Upload Photo",
+  "dashboard": "Dashboard",
+  "doctors": "Colleagues",
+  "appointments": "Schedule",
+  "chats": "Chats",
+  "settings": "Settings",
+  "search_placeholder": "Search...",
+  "colleague_directory": {
+    "title": "Colleague Directory",
+    "description": "Connect and collaborate with other specialists",
+    "search": "Find a colleague...",
+    "send_message": "Send Message"
+  },
+  "schedule": {
+    "title": "My Schedule",
+    "description": "Manage your appointments and availability",
+    "new_appointment": "New Appointment",
+    "create": "Create Appointment",
+    "empty": "No appointments for this day",
+    "details": "Details",
+    "todays_schedule": "Today's Schedule"
+  },
+  "profile_page": {
+    "title": "Doctor Profile",
+    "edit": "Edit Profile",
+    "view": "View Profile",
+    "personal_info": "Personal Info",
+    "manage_account": "Manage your account details",
+    "activity_history": "Activity History",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "phone": "Phone",
+    "address": "Address",
+    "job": "Job",
+    "department": "Department",
+    "role_doctor": "Doctor",
+    "status_active": "Active",
+    "joined": "Joined",
+    "total_patients": "Total Patients",
+    "appointments_count": "Appointments",
+    "reports_count": "Reports",
+    "saving": "Saving...",
+    "save_success": "Profile updated successfully!"
+  },
+  "stats": {
+    "upcoming_appointments": "Appointments",
+    "active_prescriptions": "Prescriptions",
+    "unread_messages": "Messages",
+    "new_patients": "New Patients",
+    "consultations": "Consultations",
+    "surgeries": "Surgeries"
+  },
+  "actions": {
+    "find_doctor": "Find Colleagues",
+    "my_schedule": "My Schedule",
+    "medical_records": "Records",
+    "reports": "Reports"
+  },
+  "banner": {
+    "title": "Welcome Back, Doctor",
+    "description": "You have 5 appointments remaining today. Check your schedule for details.",
+    "button": "View Schedule"
+  },
+  "activity": {
+    "appointment": "Appointment",
+    "prescription": "Prescription",
+    "result": "Result",
+    "just_now": "Just now",
+    "two_days_ago": "2 days ago",
+    "one_month_ago": "1 month ago"
+  },
+  "form": {
+    "patient_name": "Patient Name",
+    "appointment_type": "Appointment Type",
+    "date_time": "Date & Time",
+    "placeholder_name": "Enter patient name",
+    "label_status": "Status",
+    "phone": "Phone",
+    "note": "Note",
+    "placeholder_note": "Enter additional details..."
+  },
+  "appointment_types": {
+    "checkup": "Checkup",
+    "consultation": "Consultation",
+    "surgery": "Surgery",
+    "follow_up": "Follow-up"
+  },
+  "status": {
+    "confirmed": "Confirmed",
+    "pending": "Pending",
+    "done": "Done",
+    "online": "Online",
+    "offline": "Offline",
+    "busy": "Busy",
+    "cancelled": "Cancelled",
+    "active": "Active"
+  },
+  "directory": {
+    "jobs": {
+      "cardiologist": "Cardiologist",
+      "dermatologist": "Dermatologist",
+      "pediatrician": "Pediatrician",
+      "neurologist": "Neurologist",
+      "surgeon": "Surgeon"
+    },
+    "departments": {
+      "cardiology": "Cardiology Dept",
+      "dermatology": "Dermatology Dept",
+      "pediatrics": "Pediatrics"
+    },
+    "tags": {
+      "surgery": "Surgery",
+      "consultation": "Consultation",
+      "skin": "Skin",
+      "research": "Research",
+      "kids": "Kids",
+      "vaccination": "Vaccination"
+    }
+  },
+  "chat": {
+    "title": "Chat",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "no_messages": "No messages",
+    "no_chats": "No active chats yet",
+    "select_chat": "Select a chat to start messaging",
+    "files": "Files",
+    "online": "Online",
+    "offline": "Offline",
+    "edited": "edited",
+    "reply": "Reply",
+    "forward": "Forward",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search_placeholder": "Search chats...",
+    "no_results": "No results found",
+    "delete_confirm_title_msg": "Delete message?",
+    "delete_confirm_content_msg": "Are you sure you want to delete this message? This action cannot be undone.",
+    "delete_chat_confirm": "Delete this conversation?",
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "download": "Download",
+    "replying_to": "Replying to",
+    "forward_title": "Forward Message"
+  },
+  "messages": {
+    "success_update": "Appointment updated successfully!",
+    "success_create": "Appointment created successfully!",
+    "success_cancel": "Appointment cancelled successfully!",
+    "error_update": "Failed to update appointment",
+    "error_create": "Failed to create appointment",
+    "error_delete": "Failed to delete appointment",
+    "login_required": "Please login to message",
+    "opening_chat": "Opening chat...",
+    "chat_opened": "Chat opened",
+    "chat_error": "Failed to start chat",
+    "error_occurred": "An error occurred"
+  },
+  "ui": {
+    "no_info": "No additional info",
+    "no_email": "No email",
+    "no_address": "No address",
+    "years_old": "years old"
+  }
+}

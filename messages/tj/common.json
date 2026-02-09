@@ -1,0 +1,193 @@
+{
+  "welcome": "Хуш омадед",
+  "guest": "Духтур",
+  "dashboard_overview": "Ҷадвалро идора кунед ва бо ҳамкорон ҳамкорӣ кунед.",
+  "quick_actions": "Минтақаи корӣ",
+  "recent_activity": "Навигариҳо",
+  "view_all": "Ҳама",
+  "login": "Воридшавӣ",
+  "register": "Бақайдгирӣ",
+  "email": "Почтаи электронӣ",
+  "password": "Рамз",
+  "remember_me": "Маро ба хотир гир",
+  "forgot_password": "Рамзро фаромӯш кардед?",
+  "no_account": "Аккаунт надоред?",
+  "profile": "Профил",
+  "logout": "Баромадан",
+  "no_colleagues": "Шумо то ҳол ҳамкорон надоред",
+  "admin_review_note": "Дархости шумо пеш аз фаъолсозӣ аз ҷониби администратор баррасӣ карда мешавад.",
+  "registration_success": "Дархости бақайдгирӣ бомуваффақият фиристода шуд! Администратор онро баррасӣ мекунад.",
+  "fullname": "Номи пурра",
+  "age": "Синн",
+  "gender": "Ҷинс",
+  "male": "Мард",
+  "female": "Зан",
+  "job": "Ихтисос",
+  "address": "Суроға",
+  "doctor_photo": "Расми духтур",
+  "upload_photo": "Боргузории расм",
+  "dashboard": "Асосӣ",
+  "doctors": "Ҳамкорон",
+  "appointments": "Ҷадвал",
+  "chats": "Чатҳо",
+  "settings": "Танзимот",
+  "search_placeholder": "Ҷустуҷӯ...",
+  "colleague_directory": {
+    "title": "Феҳристи ҳамкорон",
+    "description": "Бо дигар мутахассисон дар тамос шавед",
+    "search": "Ёфтани ҳамкор...",
+    "send_message": "Паём фиристодан"
+  },
+  "schedule": {
+    "title": "Ҷадвали ман",
+    "description": "Қабулҳо ва дастрасии худро идора кунед",
+    "new_appointment": "Қабули нав",
+    "create": "Сохтани қабул",
+    "empty": "Дар ин рӯз қабул нест",
+    "details": "Тафсилот",
+    "todays_schedule": "Ҷадвали имрӯз"
+  },
+  "profile_page": {
+    "title": "Профили духтур",
+    "edit": "Таҳрири профил",
+    "view": "Дидани профил",
+    "personal_info": "Маълумоти шахсӣ",
+    "manage_account": "Идоракунии маълумоти аккаунт",
+    "activity_history": "Таърихи фаъолият",
+    "save": "Захира кардан",
+    "cancel": "Бекор кардан",
+    "phone": "Телефон",
+    "address": "Суроға",
+    "job": "Ихтисос",
+    "department": "Шуъба",
+    "role_doctor": "Духтур",
+    "status_active": "Фаъол",
+    "joined": "Ҳамроҳ шуд",
+    "total_patients": "Ҳамаи беморон",
+    "appointments_count": "Қабулҳо",
+    "reports_count": "Ҳисоботҳо",
+    "saving": "Захирашавӣ...",
+    "save_success": "Профил бомуваффақият навсозӣ шуд!"
+  },
+  "stats": {
+    "upcoming_appointments": "Қабулҳо",
+    "active_prescriptions": "Рецептҳо",
+    "unread_messages": "Паёмҳо",
+    "new_patients": "Беморони нав",
+    "consultations": "Машваратҳо",
+    "surgeries": "Ҷарроҳиҳо"
+  },
+  "actions": {
+    "find_doctor": "Ёфтани ҳамкор",
+    "my_schedule": "Ҷадвали ман",
+    "medical_records": "Сабтҳо",
+    "reports": "Ҳисоботҳо"
+  },
+  "banner": {
+    "title": "Хуш омадед, Духтур",
+    "description": "Шумо имрӯз 5 қабул доред. Ҷадвалро санҷед.",
+    "button": "Ҷадвал"
+  },
+  "activity": {
+    "appointment": "Қабул",
+    "prescription": "Рецепт",
+    "result": "Натиҷа",
+    "just_now": "Ҳозир",
+    "two_days_ago": "2 рӯз пеш",
+    "one_month_ago": "1 моҳ пеш"
+  },
+  "form": {
+    "patient_name": "Номи бемор",
+    "appointment_type": "Намуди қабул",
+    "date_time": "Сана ва вақт",
+    "placeholder_name": "Номи беморро ворид кунед",
+    "label_status": "Ҳолат",
+    "phone": "Телефон",
+    "note": "Заметка",
+    "placeholder_note": "Тафсилоти иловагиро ворид кунед..."
+  },
+  "appointment_types": {
+    "checkup": "Муоина",
+    "consultation": "Машварат",
+    "surgery": "Ҷарроҳӣ",
+    "follow_up": "Қабули такрорӣ"
+  },
+  "status": {
+    "confirmed": "Тасдиқ шуд",
+    "pending": "Дар интизорӣ",
+    "done": "Анҷом ёфт",
+    "online": "Фаъол",
+    "offline": "Ғайрифаъол",
+    "busy": "Машғул",
+    "cancelled": "Бекор шуд",
+    "active": "Фаъол"
+  },
+  "directory": {
+    "jobs": {
+      "cardiologist": "Кардиолог",
+      "dermatologist": "Дерматолог",
+      "pediatrician": "Педиатр",
+      "neurologist": "Неврологи",
+      "surgeon": "Ҷарроҳ"
+    },
+    "departments": {
+      "cardiology": "Шуъбаи кардиология",
+      "dermatology": "Шуъбаи дерматология",
+      "pediatrics": "Педиатрия"
+    },
+    "tags": {
+      "surgery": "Ҷарроҳӣ",
+      "consultation": "Машварат",
+      "skin": "Пӯст",
+      "research": "Тадқиқот",
+      "kids": "Кӯдакон",
+      "vaccination": "Ваксинасия"
+    }
+  },
+  "chat": {
+    "title": "Чат",
+    "placeholder": "Паём нависед...",
+    "send": "Фиристодан",
+    "no_messages": "Паём нест",
+    "no_chats": "Шумо то ҳол чатҳои фаъол надоред",
+    "select_chat": "Барои оғози муколама чатро интихоб кунед",
+    "files": "Файлҳо",
+    "online": "Дар шабака",
+    "offline": "Ғайрифаъол",
+    "edited": "тағйирёфта",
+    "reply": "Ҷавоб додан",
+    "forward": "Фиристодан",
+    "delete": "Нест кардан",
+    "edit": "Таҳрир кардан",
+    "search_placeholder": "Ҷустуҷӯи чатҳо...",
+    "no_results": "Ягон натиҷа ёфт нашуд",
+    "delete_confirm_title_msg": "Паём нест карда шавад?",
+    "delete_confirm_content_msg": "Шумо мутмаинед, ки ин паёмро нест кардан мехоҳед? Ин амалро баргардонидан мумкин нест.",
+    "delete_chat_confirm": "Ин гуфтугӯ нест карда шавад?",
+    "yes": "Ҳа",
+    "no": "Не",
+    "cancel": "Бекор кардан",
+    "download": "Боргирӣ",
+    "replying_to": "Ҷавоб ба",
+    "forward_title": "Интиқоли паём"
+  },
+  "messages": {
+    "success_update": "Қабул бомуваффақият навсозӣ шуд!",
+    "success_create": "Қабул бомуваффақият сохта шуд!",
+    "success_cancel": "Қабул бомуваффақият бекор шуд!",
+    "error_update": "Навсозии қабул ноком шуд",
+    "error_create": "Сохтани қабул ноком шуд",
+    "error_delete": "Нест кардани қабул ноком шуд",
+    "login_required": "Лутфан барои фиристодани паём ворид шавед",
+    "opening_chat": "Кушодани чат...",
+    "chat_opened": "Чат кушода шуд",
+    "chat_error": "Оғози чат ноком шуд",
+    "error_occurred": "Хатогие рӯй дод"
+  },
+  "ui": {
+    "no_info": "Маълумоти иловагӣ нест",
+    "no_email": "Email нест",
+    "no_address": "Суроға нест",
+    "years_old": "сола"
+  }
+}

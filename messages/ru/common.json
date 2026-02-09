@@ -1,0 +1,193 @@
+{
+  "welcome": "Добро пожаловать",
+  "guest": "Доктор",
+  "dashboard_overview": "Управляйте расписанием и сотрудничайте с коллегами.",
+  "quick_actions": "Рабочая зона",
+  "recent_activity": "Обновления",
+  "view_all": "Все",
+  "login": "Войти",
+  "register": "Регистрация",
+  "email": "Эл. почта",
+  "password": "Пароль",
+  "remember_me": "Запомнить меня",
+  "forgot_password": "Забыли пароль?",
+  "no_account": "Нет аккаунта?",
+  "profile": "Профиль",
+  "logout": "Выйти",
+  "no_colleagues": "У вас пока нет коллег",
+  "admin_review_note": "Ваш запрос будет рассмотрен администратором перед активацией.",
+  "registration_success": "Запрос на регистрацию успешно отправлен! Администратор рассмотрит его.",
+  "fullname": "Полное имя",
+  "age": "Возраст",
+  "gender": "Пол",
+  "male": "Мужской",
+  "female": "Женский",
+  "job": "Специальность",
+  "address": "Адрес",
+  "doctor_photo": "Фото врача",
+  "upload_photo": "Загрузить фото",
+  "dashboard": "Главная",
+  "doctors": "Коллеги",
+  "appointments": "Расписание",
+  "chats": "Чаты",
+  "settings": "Настройки",
+  "search_placeholder": "Поиск...",
+  "colleague_directory": {
+    "title": "Справочник коллег",
+    "description": "Общайтесь и сотрудничайте с другими специалистами",
+    "search": "Найти коллегу...",
+    "send_message": "Написать"
+  },
+  "schedule": {
+    "title": "Моё расписание",
+    "description": "Управляйте записями и доступностью",
+    "new_appointment": "Новая запись",
+    "create": "Создать запись",
+    "empty": "На этот день нет записей",
+    "details": "Детали",
+    "todays_schedule": "Расписание на сегодня"
+  },
+  "profile_page": {
+    "title": "Профиль врача",
+    "edit": "Редактировать",
+    "view": "Просмотр",
+    "personal_info": "Личная информация",
+    "manage_account": "Управление данными аккаунта",
+    "activity_history": "История активности",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "job": "Специальность",
+    "department": "Отделение",
+    "role_doctor": "Врач",
+    "status_active": "Активен",
+    "joined": "Присоединился",
+    "total_patients": "Всего пациентов",
+    "appointments_count": "Записей",
+    "reports_count": "Отчётов",
+    "saving": "Сохранение...",
+    "save_success": "Профиль успешно обновлён!"
+  },
+  "stats": {
+    "upcoming_appointments": "Записи",
+    "active_prescriptions": "Рецепты",
+    "unread_messages": "Сообщения",
+    "new_patients": "Новые пациенты",
+    "consultations": "Консультации",
+    "surgeries": "Операции"
+  },
+  "actions": {
+    "find_doctor": "Найти коллегу",
+    "my_schedule": "Мое расписание",
+    "medical_records": "Записи",
+    "reports": "Отчеты"
+  },
+  "banner": {
+    "title": "С возвращением, Доктор",
+    "description": "У вас сегодня 5 записей. Проверьте расписание.",
+    "button": "Расписание"
+  },
+  "activity": {
+    "appointment": "Запись",
+    "prescription": "Рецепт",
+    "result": "Результат",
+    "just_now": "Только что",
+    "two_days_ago": "2 дня назад",
+    "one_month_ago": "1 месяц назад"
+  },
+  "form": {
+    "patient_name": "Имя пациента",
+    "appointment_type": "Тип приема",
+    "date_time": "Дата и время",
+    "placeholder_name": "Введите имя пациента",
+    "label_status": "Статус",
+    "phone": "Телефон",
+    "note": "Заметка",
+    "placeholder_note": "Введите дополнительные детали..."
+  },
+  "appointment_types": {
+    "checkup": "Осмотр",
+    "consultation": "Консультация",
+    "surgery": "Операция",
+    "follow_up": "Повторный прием"
+  },
+  "status": {
+    "confirmed": "Подтверждено",
+    "pending": "В ожидании",
+    "done": "Завершено",
+    "online": "В сети",
+    "offline": "Не в сети",
+    "busy": "Занят",
+    "cancelled": "Отменён",
+    "active": "Активен"
+  },
+  "directory": {
+    "jobs": {
+      "cardiologist": "Кардиолог",
+      "dermatologist": "Дерматолог",
+      "pediatrician": "Педиатр",
+      "neurologist": "Невролог",
+      "surgeon": "Хирург"
+    },
+    "departments": {
+      "cardiology": "Кардиология",
+      "dermatology": "Дерматология",
+      "pediatrics": "Педиатрия"
+    },
+    "tags": {
+      "surgery": "Хирургия",
+      "consultation": "Консультация",
+      "skin": "Кожа",
+      "research": "Исследования",
+      "kids": "Дети",
+      "vaccination": "Вакцинация"
+    }
+  },
+  "chat": {
+    "title": "Чат",
+    "placeholder": "Введите сообщение...",
+    "send": "Отправить",
+    "no_messages": "Нет сообщений",
+    "no_chats": "У вас пока нет активных чатов",
+    "select_chat": "Выберите чат, чтобы начать общение",
+    "files": "Файлы",
+    "online": "В сети",
+    "offline": "Не в сети",
+    "edited": "изменено",
+    "reply": "Ответить",
+    "forward": "Переслать",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "search_placeholder": "Поиск чатов...",
+    "no_results": "Ничего не найдено",
+    "delete_confirm_title_msg": "Удалить сообщение?",
+    "delete_confirm_content_msg": "Вы уверены, что хотите удалить это сообщение? Это действие нельзя отменить.",
+    "delete_chat_confirm": "Удалить эту переписку?",
+    "yes": "Да",
+    "no": "Нет",
+    "cancel": "Отмена",
+    "download": "Скачать",
+    "replying_to": "Ответ на",
+    "forward_title": "Переслать сообщение"
+  },
+  "messages": {
+    "success_update": "Запись успешно обновлена!",
+    "success_create": "Запись успешно создана!",
+    "success_cancel": "Запись успешно отменена!",
+    "error_update": "Не удалось обновить запись",
+    "error_create": "Не удалось создать запись",
+    "error_delete": "Не удалось удалить запись",
+    "login_required": "Пожалуйста, войдите, чтобы отправить сообщение",
+    "opening_chat": "Открытие чата...",
+    "chat_opened": "Чат открыт",
+    "chat_error": "Не удалось начать чат",
+    "error_occurred": "Произошла ошибка"
+  },
+  "ui": {
+    "no_info": "Нет дополнительной информации",
+    "no_email": "Нет email",
+    "no_address": "Нет адреса",
+    "years_old": "лет"
+  }
+}
