@@ -1,8 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+import { getSupabaseServer } from '@/lib/supabaseServer';
 
 export async function GET(request: Request) {
     try {
@@ -11,7 +8,8 @@ export async function GET(request: Request) {
         if (!email) {
             return NextResponse.json({ error: 'Email is required' }, { status: 400 });
         }
-        const supabase = createClient(supabaseUrl, supabaseKey);
+        const supabase = getSupabaseServer();
+
         const { data, error } = await supabase
             .from('users')
             .select('*')

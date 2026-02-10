@@ -1,13 +1,10 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+import { getSupabaseAdmin } from '@/lib/supabaseServer';
 
 export async function PUT(request: Request) {
     try {
         const body = await request.json();
-        const { email, full_name, age, gender, address, job } = body;
+        const { email, full_name, age, gender, address, job, avatar_url } = body;
 
         console.log('Update user request:', { email, full_name, age, gender, address, job });
 
@@ -15,18 +12,9 @@ export async function PUT(request: Request) {
             return NextResponse.json({ error: 'Email is required' }, { status: 400 });
         }
 
-        if (!supabaseUrl || !supabaseServiceKey) {
-            console.error('Missing Supabase credentials');
-            return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
-        }
-
         // Use admin client to bypass RLS
-        const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-            auth: {
-                autoRefreshToken: false,
-                persistSession: false
-            }
-        });
+        const supabaseAdmin = getSupabaseAdmin();
+
 
         // Update user in users table
         const { data, error } = await supabaseAdmin
@@ -37,6 +25,7 @@ export async function PUT(request: Request) {
                 gender,
                 address,
                 job,
+                fileAvatar: avatar_url,
             })
             .eq('email', email)
             .select()
@@ -53,7 +42,7 @@ export async function PUT(request: Request) {
         // Also update user_metadata in auth
         try {
             const { data: authUsers } = await supabaseAdmin.auth.admin.listUsers();
-            const authUser = authUsers?.users?.find(u => u.email === email);
+            const authUser = authUsers?.users?.find((u: { email?: string }) => u.email === email);
             
             if (authUser) {
                 await supabaseAdmin.auth.admin.updateUserById(authUser.id, {
@@ -64,6 +53,8 @@ export async function PUT(request: Request) {
                         gender,
                         address,
                         job,
+                        avatar_url, // Keep avatar_url in metadata for frontend consistency if used there
+                        fileAvatar: avatar_url, // Add fileAvatar to metadata as well for safety
                     }
                 });
             }
@@ -73,11 +64,13 @@ export async function PUT(request: Request) {
 
         console.log('Update success:', data);
         return NextResponse.json({ data, success: true });
-    } catch (error: any) {
+    } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'Unknown error';
         console.error('Update user API error:', error);
         return NextResponse.json({ 
             error: 'Internal server error',
-            details: error?.message || 'Unknown error'
+            details: message
         }, { status: 500 });
     }
 }
+

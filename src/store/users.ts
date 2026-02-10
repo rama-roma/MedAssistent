@@ -38,7 +38,12 @@ export const useUsersStore = create<UsersState>((set) => ({
         return;
       }
 
-      set({ users: data || [], loading: false });
+      const mappedUsers = (data || []).map((u: any) => ({
+        ...u,
+        avatar_url: u.fileAvatar || u.avatar_url || null,
+      }));
+
+      set({ users: mappedUsers, loading: false });
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error';
       console.error('Unexpected error:', err);

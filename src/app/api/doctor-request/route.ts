@@ -1,30 +1,14 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+import { getSupabaseAdmin } from '@/lib/supabaseServer';
 
 export async function POST(request: Request) {
     try {
         const body = await request.json();
         const { fullname, email, password, age, gender, job, address, photo } = body;
 
-        // Debug logging
-        console.log('API Request received for:', email);
-        console.log('Supabase URL available:', !!supabaseUrl);
-        console.log('Supabase Service Key available:', !!supabaseServiceKey);
-
-        if (!supabaseUrl || !supabaseServiceKey) {
-            return NextResponse.json({ error: 'Server configuration error: Missing Supabase credentials' }, { status: 500 });
-        }
-
         // Create Supabase admin client
-        const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-            auth: {
-                autoRefreshToken: false,
-                persistSession: false
-            }
-        });
+        const supabaseAdmin = getSupabaseAdmin();
+
 
         // Create user in Supabase Auth with metadata
         const { data: authData, error: authError } = await supabaseAdmin.auth.admin.createUser({
@@ -61,7 +45,7 @@ export async function POST(request: Request) {
                 gender,
                 address,
                 job,
-                avatar_url: photo || null,
+                fileAvatar: photo || null,
             });
 
         if (dbError) {

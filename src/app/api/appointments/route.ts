@@ -1,19 +1,10 @@
 import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-
-// Initialize admin client to bypass RLS
-const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-    auth: {
-        autoRefreshToken: false,
-        persistSession: false
-    }
-});
+import { getSupabaseAdmin } from '@/lib/supabaseServer';
 
 export async function POST(request: Request) {
     try {
+        const supabaseAdmin = getSupabaseAdmin();
+
         const body = await request.json();
         const { doctor_id, patient_name, patient_phone, note, appointment_date, status, type } = body;
 
@@ -50,6 +41,8 @@ export async function POST(request: Request) {
 
 export async function PUT(request: Request) {
     try {
+        const supabaseAdmin = getSupabaseAdmin();
+
         const body = await request.json();
         const { id, doctor_id, patient_name, patient_phone, note, appointment_date, status, type } = body;
 
@@ -87,6 +80,8 @@ export async function PUT(request: Request) {
 
 export async function DELETE(request: Request) {
     try {
+        const supabaseAdmin = getSupabaseAdmin();
+
         const { searchParams } = new URL(request.url);
         const id = searchParams.get('id');
         const doctorId = searchParams.get('doctor_id');
@@ -116,6 +111,8 @@ export async function DELETE(request: Request) {
 
 export async function GET(request: Request) {
     try {
+        const supabaseAdmin = getSupabaseAdmin();
+
         const { searchParams } = new URL(request.url);
         const doctorId = searchParams.get('doctor_id');
 

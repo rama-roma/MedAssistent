@@ -27,6 +27,7 @@ const ProfilePage = () => {
     const [saving, setSaving] = useState(false);
     const [form] = Form.useForm();
     const [userData, setUserData] = useState<any>(null);
+    const [newAvatarBase64, setNewAvatarBase64] = useState<string | null>(null);
 
     // Fetch user data from users table
     useEffect(() => {
@@ -63,6 +64,7 @@ const ProfilePage = () => {
                     gender: values.gender,
                     address: values.address,
                     job: values.job,
+                    avatar_url: newAvatarBase64 || userData?.avatar_url,
                 }),
             });
 
@@ -70,6 +72,7 @@ const ProfilePage = () => {
 
             if (result.success) {
                 setUserData(result.data);
+                setNewAvatarBase64(null);
                 message.success(t('profile_page.save_success') || 'Profile updated successfully!');
                 setEditing(false);
             } else {
@@ -99,7 +102,15 @@ const ProfilePage = () => {
         const isImage = file.type.startsWith('image/');
         if (!isImage) {
             message.error('You can only upload image files!');
+            return false;
         }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            setNewAvatarBase64(e.target?.result as string);
+        };
+        reader.readAsDataURL(file);
+
         return false;
     };
 
@@ -125,7 +136,7 @@ const ProfilePage = () => {
                             <div className="relative group">
                                 <Avatar
                                     size={160}
-                                    src={userData?.avatar_url || user?.user_metadata?.avatar_url}
+                                    src={newAvatarBase64 || userData?.fileAvatar || userData?.avatar_url || user?.user_metadata?.avatar_url}
                                     icon={<UserOutlined />}
                                     className="relative border-4 border-white bg-primary/20 text-primary shadow-xl"
                                 />
@@ -138,7 +149,7 @@ const ProfilePage = () => {
                                         shape="circle"
                                         size="large"
                                         icon={<CameraOutlined />}
-                                        className="absolute bottom-2 right-2 shadow-lg bg-primary text-white border-2 border-white opacity-0 group-hover:opacity-100 transition-all w-12 h-12"
+                                        className="absolute bottom-2 right-2 shadow-lg bg-primary text-white border-2 border-white opacity-90 hover:opacity-100 transition-all w-12 h-12 flex items-center justify-center cursor-pointer z-20"
                                     />
                                 </Upload>
                             </div>
