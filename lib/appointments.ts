@@ -64,3 +64,18 @@ export const fetchAllAppointments = async (): Promise<Appointment[]> => {
 
     return data || [];
 };
+
+/**
+ * Deletes an appointment by ID.
+ */
+export const deleteAppointment = async (id: string): Promise<void> => {
+    const { error } = await supabase
+        .from('appointments')
+        .delete()
+        .eq('id', id);
+
+    if (error) {
+        console.error('Error deleting appointment:', error);
+        throw error;
+    }
+};

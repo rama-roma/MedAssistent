@@ -6,6 +6,7 @@ import type { Dayjs } from 'dayjs';
 import { PlusOutlined, ClockCircleOutlined, UserOutlined, CalendarOutlined, PhoneOutlined, FileTextOutlined, EditOutlined, DeleteOutlined, MoreOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
 import { useTranslations } from 'next-intl';
+import { useSearchParams, useRouter } from 'next/navigation';
 import DashboardLayout from '@/src/components/DashboardLayout';
 import { useAuthStore } from '@/src/store/authStore';
 
@@ -39,11 +40,24 @@ const AppointmentsPage = () => {
     const [doctorId, setDoctorId] = useState<string | null>(null);
     const [editingAppointment, setEditingAppointment] = useState<Appointment | null>(null);
 
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const actionParam = searchParams.get('action');
+
     const [form] = Form.useForm();
     // ... (omitting lines for brevity in thought, but I will provide full replacement content)
     // Wait, I should provide the full block as required by replacement content.
     // ...
     // I'll just do the replacement.
+
+    // Handle Auto-Open Modal from URL
+    useEffect(() => {
+        if (actionParam === 'new') {
+            setIsModalOpen(true);
+            // Clean URL
+            router.replace('/appointments');
+        }
+    }, [actionParam, router]);
 
     useEffect(() => {
         const getDoctorInfo = async () => {

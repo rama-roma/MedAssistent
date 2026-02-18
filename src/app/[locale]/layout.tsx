@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/src/components/theme-provider";
 import { AuthInit } from "@/src/features/authinit";
 import AntdRegistry from "@/src/components/AntdRegistry";
+import VoiceAgent from "@/src/components/VoiceAgent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default async function RootLayout({
           <NextIntlClientProvider locale={locale} messages={messages}>
             <AntdRegistry>
               <AuthInit />
+              <VoiceAgent />
               {children}
             </AntdRegistry>
           </NextIntlClientProvider>
