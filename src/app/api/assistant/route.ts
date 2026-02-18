@@ -46,7 +46,7 @@ function getLocalFallbackResponse(text: string, language: string = 'ru-RU') {
         return {
             response: resp("Открываю расписание.", "Opening schedule.", "Ҷадвалро мекушоям."),
             action: "NAVIGATE",
-            data: { path: "/schedule" }
+            data: { path: "/appointments" }
         };
     }
     if (t.includes('пациент') || t.includes('patient') || t.includes('бемор')) {
